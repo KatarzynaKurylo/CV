@@ -1,14 +1,3 @@
-#install.packages("dplyr")
-#install.packages("car")
-#install.packages("ggpubr")
-#install.packages("gridExtra")
-#install.packages("dunn.test") #do testu dunna
-#install.packages("FSA") #do testu dunna
-#install.packages("tidyverse") #do select_if
-#install.packages("purr")
-#library(purr)
-#library(tidyverse)
-#install.packages("qpdf") #scalanie plikow
 library(dplyr)
 library(ggpubr) #wykres
 library(gridExtra) #kilka wykresow na raz
@@ -110,7 +99,7 @@ for (i in 2:ncol(dane))
     parametr <-colnames(dane)[i]
     tabelka <-dane %>% group_by(dane[1]) %>%
         summarise(parametr,ilosc=length(.data[[parametr]]),
-                  min=min(.data[[parametr]]),#.data... s³u¿y do pobrania danych za pomoc¹ nazwy kolumny
+                  min=min(.data[[parametr]]),#.data... sÂ³uÂ¿y do pobrania danych za pomocÂ¹ nazwy kolumny
                   max=max(.data[[parametr]]),
                   mean=mean(.data[[parametr]]),
                   median=median(.data[[parametr]]),
@@ -323,7 +312,7 @@ pdf(file="roznice.pdf")
 grid.table(roznice)
 dev.off()
 }
-#dla dwóch grup
+#dla dwÃ³ch grup
 if (ilosc_grup==2)
 {
   r <-c() #wektor roznic
